@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Inglés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        .tabs {
+            overflow: hidden;
+            background-color: #333;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .tablink {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            padding: 14px 16px;
+            cursor: pointer;
+            font-size: 17px;
+            color: #f2f2f2;
+            transition: 0.3s;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .tablink:hover {
+            background-color: #575757;
+            color: #fff;
+        }
+        .tablink.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border-top: none;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        .exercise {
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .feedback {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ejercicios de Inglés</h1>
+
+<!-- Pestañas para los temas -->
+<div class="tabs">
+    <button class="tablink" onclick="openTab(event, 'simplePresent')">Presente Simple</button>
+    <button class="tablink" onclick="openTab(event, 'presentContinuous')">Presente Continuo</button>
+    <button class="tablink" onclick="openTab(event, 'simplePast')">Pasado Simple</button>
+    <button class="tablink" onclick="openTab(event, 'future')">Futuro con Will y Going To</button>
+</div>
+
+<!-- Ejercicio: Presente Simple -->
+<div id="simplePresent" class="tabcontent">
+    <div class="exercise">
+        <h2>Presente Simple</h2>
+        <p>Selecciona la palabra correcta para completar las oraciones:</p>
+        <form id="simplePresentForm">
+            <!-- 20 Ejercicios de Presente Simple -->
+            <p>1. She <select id="simplePresent1">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="go">go</option>
+                <option value="goes">goes</option>
+            </select> to school every day.
+            <button type="button" onclick="checkSingleAnswer('simplePresent1', 'goes', 'feedback1')">Verificar</button>
+            <span id="feedback1" class="feedback"></span></p>
+
+            <p>2. They <select id="simplePresent2">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="plays">plays</option>
+                <option value="play">play</option>
+            </select> football on weekends.
+            <button type="button" onclick="checkSingleAnswer('simplePresent2', 'play', 'feedback2')">Verificar</button>
+            <span id="feedback2" class="feedback"></span></p>
+
+            <p>3. He <select id="simplePresent3">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="eat">eat</option>
+                <option value="eats">eats</option>
+            </select> breakfast at 7:00 AM.
+            <button type="button" onclick="checkSingleAnswer('simplePresent3', 'eats', 'feedback3')">Verificar</button>
+            <span id="feedback3" class="feedback"></span></p>
+
+            <p>4. They <select id="simplePresent4">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="lives">lives</option>
+                <option value="live">live</option>
+            </select> in New York.
+            <button type="button" onclick="checkSingleAnswer('simplePresent4', 'live', 'feedback4')">Verificar</button>
+            <span id="feedback4" class="feedback"></span></p>
+
+            <p>5. The cat <select id="simplePresent5">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="drink">drink</option>
+                <option value="drinks">drinks</option>
+            </select> milk every morning.
+            <button type="button" onclick="checkSingleAnswer('simplePresent5', 'drinks', 'feedback5')">Verificar</button>
+            <span id="feedback5" class="feedback"></span></p>
+
+            <p>6. I <select id="simplePresent6">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="like">like</option>
+                <option value="likes">likes</option>
+            </select> to read books in my free time.
+            <button type="button" onclick="checkSingleAnswer('simplePresent6', 'like', 'feedback6')">Verificar</button>
+            <span id="feedback6" class="feedback"></span></p>
+
+            <p>7. They <select id="simplePresent7">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="study">study</option>
+                <option value="studies">studies</option>
+            </select> English at the university.
+            <button type="button" onclick="checkSingleAnswer('simplePresent7', 'study', 'feedback7')">Verificar</button>
+            <span id="feedback7" class="feedback"></span></p>
+
+            <p>8. She <select id="simplePresent8">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="go">go</option>
+                <option value="goes">goes</option>
+            </select> to the gym twice a week.
+            <button type="button" onclick="checkSingleAnswer('simplePresent8', 'goes', 'feedback8')">Verificar</button>
+            <span id="feedback8" class="feedback"></span></p>
+
+            <p>9. The dog <select id="simplePresent9">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="run">run</option>
+                <option value="runs">runs</option>
+            </select> very fast.
+            <button type="button" onclick="checkSingleAnswer('simplePresent9', 'runs', 'feedback9')">Verificar</button>
+            <span id="feedback9" class="feedback"></span></p>
+
+            <p>10. We <select id="simplePresent10">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="love">love</option>
+                <option value="loves">loves</option>
+            </select> to travel during the summer.
+            <button type="button" onclick="checkSingleAnswer('simplePresent10', 'love', 'feedback10')">Verificar</button>
+            <span id="feedback10" class="feedback"></span></p>
+
+            <p>11. John <select id="simplePresent11">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="work">work</option>
+                <option value="works">works</option>
+            </select> at a bank.
+            <button type="button" onclick="checkSingleAnswer('simplePresent11', 'works', 'feedback11')">Verificar</button>
+            <span id="feedback11" class="feedback"></span></p>
+
+            <p>12. The birds <select id="simplePresent12">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="sing">sing</option>
+                <option value="sings">sings</option>
+            </select> every morning.
+            <button type="button" onclick="checkSingleAnswer('simplePresent12', 'sing', 'feedback12')">Verificar</button>
+            <span id="feedback12" class="feedback"></span></p>
+
+            <p>13. She <select id="simplePresent13">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="wash">wash</option>
+                <option value="washes">washes</option>
+            </select> the dishes after dinner.
+            <button type="button" onclick="checkSingleAnswer('simplePresent13', 'washes', 'feedback13')">Verificar</button>
+            <span id="feedback13" class="feedback"></span></p>
+
+            <p>14. They <select id="simplePresent14">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="have">have</option>
+                <option value="has">has</option>
+            </select> a big house.
+            <button type="button" onclick="checkSingleAnswer('simplePresent14', 'have', 'feedback14')">Verificar</button>
+            <span id="feedback14" class="feedback"></span></p>
+
+            <p>15. He <select id="simplePresent15">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="do">do</option>
+                <option value="does">does</option>
+            </select> his homework every day.
+            <button type="button" onclick="checkSingleAnswer('simplePresent15', 'does', 'feedback15')">Verificar</button>
+            <span id="feedback15" class="feedback"></span></p>
+
+            <p>16. We <select id="simplePresent16">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="watch">watch</option>
+                <option value="watches">watches</option>
+            </select> TV in the evening.
+            <button type="button" onclick="checkSingleAnswer('simplePresent16', 'watch', 'feedback16')">Verificar</button>
+            <span id="feedback16" class="feedback"></span></p>
+
+            <p>17. The sun <select id="simplePresent17">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="rise">rise</option>
+                <option value="rises">rises</option>
+            </select> in the east.
+            <button type="button" onclick="checkSingleAnswer('simplePresent17', 'rises', 'feedback17')">Verificar</button>
+            <span id="feedback17" class="feedback"></span></p>
+
+            <p>18. She <select id="simplePresent18">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="study">study</option>
+                <option value="studies">studies</option>
+            </select> hard for exams.
+            <button type="button" onclick="checkSingleAnswer('simplePresent18', 'studies', 'feedback18')">Verificar</button>
+            <span id="feedback18" class="feedback"></span></p>
+
+            <p>19. They <select id="simplePresent19">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="play">play</option>
+                <option value="plays">plays</option>
+            </select> the guitar.
+            <button type="button" onclick="checkSingleAnswer('simplePresent19', 'play', 'feedback19')">Verificar</button>
+            <span id="feedback19" class="feedback"></span></p>
+
+            <p>20. He <select id="simplePresent20">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="teach">teach</option>
+                <option value="teaches">teaches</option>
+            </select> Spanish at the school.
+            <button type="button" onclick="checkSingleAnswer('simplePresent20', 'teaches', 'feedback20')">Verificar</button>
+            <span id="feedback20" class="feedback"></span></p>
+        </form>
+    </div>
+</div>
+
+<!-- Ejercicio: Presente Continuo -->
+<div id="presentContinuous" class="tabcontent">
+    <div class="exercise">
+        <h2>Presente Continuo</h2>
+        <p>Selecciona la palabra correcta para completar las oraciones:</p>
+        <form id="presentContinuousForm">
+            <!-- 20 Ejercicios de Presente Continuo -->
+            <p>1. She <select id="presentContinuous1">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous2">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="run">run</option>
+                <option value="running">running</option>
+            </select> right now.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous1', 'presentContinuous2', 'is', 'running', 'feedbackC1')">Verificar</button>
+            <span id="feedbackC1" class="feedback"></span></p>
+
+            <p>2. They <select id="presentContinuous3">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous4">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="play">play</option>
+                <option value="playing">playing</option>
+            </select> football.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous3', 'presentContinuous4', 'are', 'playing', 'feedbackC2')">Verificar</button>
+            <span id="feedbackC2" class="feedback"></span></p>
+
+            <p>3. I <select id="presentContinuous5">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="am">am</option>
+            </select> <select id="presentContinuous6">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="write">write</option>
+                <option value="writing">writing</option>
+            </select> an email right now.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous5', 'presentContinuous6', 'am', 'writing', 'feedbackC3')">Verificar</button>
+            <span id="feedbackC3" class="feedback"></span></p>
+
+            <p>4. He <select id="presentContinuous7">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous8">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="read">read</option>
+                <option value="reading">reading</option>
+            </select> a book.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous7', 'presentContinuous8', 'is', 'reading', 'feedbackC4')">Verificar</button>
+            <span id="feedbackC4" class="feedback"></span></p>
+
+            <p>5. We <select id="presentContinuous9">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="are">are</option>
+                <option value="is">is</option>
+            </select> <select id="presentContinuous10">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="watch">watch</option>
+                <option value="watching">watching</option>
+            </select> TV right now.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous9', 'presentContinuous10', 'are', 'watching', 'feedbackC5')">Verificar</button>
+            <span id="feedbackC5" class="feedback"></span></p>
+
+            <p>6. She <select id="presentContinuous11">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous12">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="cook">cook</option>
+                <option value="cooking">cooking</option>
+            </select> dinner.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous11', 'presentContinuous12', 'is', 'cooking', 'feedbackC6')">Verificar</button>
+            <span id="feedbackC6" class="feedback"></span></p>
+
+            <p>7. They <select id="presentContinuous13">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous14">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="study">study</option>
+                <option value="studying">studying</option>
+            </select> English.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous13', 'presentContinuous14', 'are', 'studying', 'feedbackC7')">Verificar</button>
+            <span id="feedbackC7" class="feedback"></span></p>
+
+            <p>8. He <select id="presentContinuous15">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+            </select> <select id="presentContinuous16">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="sleep">sleep</option>
+                <option value="sleeping">sleeping</option>
+            </select> now.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous15', 'presentContinuous16', 'am', 'sleeping', 'feedbackC8')">Verificar</button>
+            <span id="feedbackC8" class="feedback"></span></p>
+
+            <p>9. We <select id="presentContinuous17">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="are">are</option>
+                <option value="is">is</option>
+            </select> <select id="presentContinuous18">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="listen">listen</option>
+                <option value="listening">listening</option>
+            </select> to music.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous17', 'presentContinuous18', 'are', 'listening', 'feedbackC9')">Verificar</button>
+            <span id="feedbackC9" class="feedback"></span></p>
+
+            <p>10. I <select id="presentContinuous19">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+            </select> <select id="presentContinuous20">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="work">work</option>
+                <option value="working">working</option>
+            </select> from home.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous19', 'presentContinuous20', 'am', 'working', 'feedbackC10')">Verificar</button>
+            <span id="feedbackC10" class="feedback"></span></p>
+
+            <p>11. The students <select id="presentContinuous21">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous22">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="study">study</option>
+                <option value="studying">studying</option>
+            </select> for their exams.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous21', 'presentContinuous22', 'are', 'studying', 'feedbackC11')">Verificar</button>
+            <span id="feedbackC11" class="feedback"></span></p>
+
+            <p>12. She <select id="presentContinuous23">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous24">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="paint">paint</option>
+                <option value="painting">painting</option>
+            </select> a beautiful picture.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous23', 'presentContinuous24', 'is', 'painting', 'feedbackC12')">Verificar</button>
+            <span id="feedbackC12" class="feedback"></span></p>
+
+            <p>13. They <select id="presentContinuous25">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous26">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="dance">dance</option>
+                <option value="dancing">dancing</option>
+            </select> at the party.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous25', 'presentContinuous26', 'are', 'dancing', 'feedbackC13')">Verificar</button>
+            <span id="feedbackC13" class="feedback"></span></p>
+
+            <p>14. He <select id="presentContinuous27">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous28">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="build">build</option>
+                <option value="building">building</option>
+            </select> a new house.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous27', 'presentContinuous28', 'is', 'building', 'feedbackC14')">Verificar</button>
+            <span id="feedbackC14" class="feedback"></span></p>
+
+            <p>15. We <select id="presentContinuous29">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous30">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="plan">plan</option>
+                <option value="planning">planning</option>
+            </select> our trip.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous29', 'presentContinuous30', 'are', 'planning', 'feedbackC15')">Verificar</button>
+            <span id="feedbackC15" class="feedback"></span></p>
+
+            <p>16. The baby <select id="presentContinuous31">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous32">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="sleep">sleep</option>
+                <option value="sleeping">sleeping</option>
+            </select> peacefully.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous31', 'presentContinuous32', 'is', 'sleeping', 'feedbackC16')">Verificar</button>
+            <span id="feedbackC16" class="feedback"></span></p>
+
+            <p>17. She <select id="presentContinuous33">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous34">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="cook">cook</option>
+                <option value="cooking">cooking</option>
+            </select> dinner right now.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous33', 'presentContinuous34', 'is', 'cooking', 'feedbackC17')">Verificar</button>
+            <span id="feedbackC17" class="feedback"></span></p>
+
+            <p>18. They <select id="presentContinuous35">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous36">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="run">run</option>
+                <option value="running">running</option>
+            </select> in the park.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous35', 'presentContinuous36', 'are', 'running', 'feedbackC18')">Verificar</button>
+            <span id="feedbackC18" class="feedback"></span></p>
+
+            <p>19. He <select id="presentContinuous37">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="presentContinuous38">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="read">read</option>
+                <option value="reading">reading</option>
+            </select> a book.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous37', 'presentContinuous38', 'is', 'reading', 'feedbackC19')">Verificar</button>
+            <span id="feedbackC19" class="feedback"></span></p>
+
+            <p>20. We <select id="presentContinuous39">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="are">are</option>
+                <option value="is">is</option>
+            </select> <select id="presentContinuous40">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="prepare">prepare</option>
+                <option value="preparing">preparing</option>
+            </select> for the exam.
+            <button type="button" onclick="checkDoubleAnswer('presentContinuous39', 'presentContinuous40', 'are', 'preparing', 'feedbackC20')">Verificar</button>
+            <span id="feedbackC20" class="feedback"></span></p>
+        </form>
+    </div>
+</div>
+
+<!-- Ejercicio: Pasado Simple -->
+<div id="simplePast" class="tabcontent">
+    <div class="exercise">
+        <h2>Pasado Simple</h2>
+        <p>Selecciona la palabra correcta para completar las oraciones:</p>
+        <form id="simplePastForm">
+            <!-- 20 Ejercicios de Pasado Simple -->
+            <p>1. I <select id="simplePast1">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="go">go</option>
+                <option value="went">went</option>
+            </select> to the park yesterday.
+            <button type="button" onclick="checkSingleAnswer('simplePast1', 'went', 'feedbackP1')">Verificar</button>
+            <span id="feedbackP1" class="feedback"></span></p>
+
+            <p>2. She <select id="simplePast2">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="watch">watch</option>
+                <option value="watched">watched</option>
+            </select> a movie last night.
+            <button type="button" onclick="checkSingleAnswer('simplePast2', 'watched', 'feedbackP2')">Verificar</button>
+            <span id="feedbackP2" class="feedback"></span></p>
+
+            <p>3. They <select id="simplePast3">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="visit">visit</option>
+                <option value="visited">visited</option>
+            </select> their grandparents last week.
+            <button type="button" onclick="checkSingleAnswer('simplePast3', 'visited', 'feedbackP3')">Verificar</button>
+            <span id="feedbackP3" class="feedback"></span></p>
+
+            <p>4. He <select id="simplePast4">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="play">play</option>
+                <option value="played">played</option>
+            </select> basketball yesterday.
+            <button type="button" onclick="checkSingleAnswer('simplePast4', 'played', 'feedbackP4')">Verificar</button>
+            <span id="feedbackP4" class="feedback"></span></p>
+
+            <p>5. The kids <select id="simplePast5">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="have">have</option>
+                <option value="had">had</option>
+            </select> fun at the park.
+            <button type="button" onclick="checkSingleAnswer('simplePast5', 'had', 'feedbackP5')">Verificar</button>
+            <span id="feedbackP5" class="feedback"></span></p>
+
+            <p>6. She <select id="simplePast6">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="study">study</option>
+                <option value="studied">studied</option>
+            </select> for the exam.
+            <button type="button" onclick="checkSingleAnswer('simplePast6', 'studied', 'feedbackP6')">Verificar</button>
+            <span id="feedbackP6" class="feedback"></span></p>
+
+            <p>7. I <select id="simplePast7">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="eat">eat</option>
+                <option value="ate">ate</option>
+            </select> pizza last night.
+            <button type="button" onclick="checkSingleAnswer('simplePast7', 'ate', 'feedbackP7')">Verificar</button>
+            <span id="feedbackP7" class="feedback"></span></p>
+
+            <p>8. They <select id="simplePast8">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="buy">buy</option>
+                <option value="bought">bought</option>
+            </select> a new car.
+            <button type="button" onclick="checkSingleAnswer('simplePast8', 'bought', 'feedbackP8')">Verificar</button>
+            <span id="feedbackP8" class="feedback"></span></p>
+
+            <p>9. He <select id="simplePast9">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="write">write</option>
+                <option value="wrote">wrote</option>
+            </select> a letter.
+            <button type="button" onclick="checkSingleAnswer('simplePast9', 'wrote', 'feedbackP9')">Verificar</button>
+            <span id="feedbackP9" class="feedback"></span></p>
+
+            <p>10. We <select id="simplePast10">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="see">see</option>
+                <option value="saw">saw</option>
+            </select> a movie yesterday.
+            <button type="button" onclick="checkSingleAnswer('simplePast10', 'saw', 'feedbackP10')">Verificar</button>
+            <span id="feedbackP10" class="feedback"></span></p>
+
+            <p>11. They <select id="simplePast11">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="make">make</option>
+                <option value="made">made</option>
+            </select> dinner last night.
+            <button type="button" onclick="checkSingleAnswer('simplePast11', 'made', 'feedbackP11')">Verificar</button>
+            <span id="feedbackP11" class="feedback"></span></p>
+
+            <p>12. She <select id="simplePast12">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="read">read</option>
+                <option value="read">read</option>
+            </select> the book yesterday.
+            <button type="button" onclick="checkSingleAnswer('simplePast12', 'read', 'feedbackP12')">Verificar</button>
+            <span id="feedbackP12" class="feedback"></span></p>
+
+            <p>13. I <select id="simplePast13">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="sleep">sleep</option>
+                <option value="slept">slept</option>
+            </select> for eight hours.
+            <button type="button" onclick="checkSingleAnswer('simplePast13', 'slept', 'feedbackP13')">Verificar</button>
+            <span id="feedbackP13" class="feedback"></span></p>
+
+            <p>14. He <select id="simplePast14">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="drive">drive</option>
+                <option value="drove">drove</option>
+            </select> to work yesterday.
+            <button type="button" onclick="checkSingleAnswer('simplePast14', 'drove', 'feedbackP14')">Verificar</button>
+            <span id="feedbackP14" class="feedback"></span></p>
+
+            <p>15. They <select id="simplePast15">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="speak">speak</option>
+                <option value="spoke">spoke</option>
+            </select> three languages.
+            <button type="button" onclick="checkSingleAnswer('simplePast15', 'spoke', 'feedbackP15')">Verificar</button>
+            <span id="feedbackP15" class="feedback"></span></p>
+
+            <p>16. She <select id="simplePast16">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="think">think</option>
+                <option value="thought">thought</option>
+            </select> about the problem.
+            <button type="button" onclick="checkSingleAnswer('simplePast16', 'thought', 'feedbackP16')">Verificar</button>
+            <span id="feedbackP16" class="feedback"></span></p>
+
+            <p>17. I <select id="simplePast17">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="know">know</option>
+                <option value="knew">knew</option>
+            </select> the answer.
+            <button type="button" onclick="checkSingleAnswer('simplePast17', 'knew', 'feedbackP17')">Verificar</button>
+            <span id="feedbackP17" class="feedback"></span></p>
+
+            <p>18. He <select id="simplePast18">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="run">run</option>
+                <option value="ran">ran</option>
+            </select> five miles yesterday.
+            <button type="button" onclick="checkSingleAnswer('simplePast18', 'ran', 'feedbackP18')">Verificar</button>
+            <span id="feedbackP18" class="feedback"></span></p>
+
+            <p>19. They <select id="simplePast19">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="drink">drink</option>
+                <option value="drank">drank</option>
+            </select> all the juice.
+            <button type="button" onclick="checkSingleAnswer('simplePast19', 'drank', 'feedbackP19')">Verificar</button>
+            <span id="feedbackP19" class="feedback"></span></p>
+
+            <p>20. She <select id="simplePast20">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="win">win</option>
+                <option value="won">won</option>
+            </select> the race.
+            <button type="button" onclick="checkSingleAnswer('simplePast20', 'won', 'feedbackP20')">Verificar</button>
+            <span id="feedbackP20" class="feedback"></span></p>
+        </form>
+    </div>
+</div>
+
+<!-- Ejercicio: Futuro con Will y Going To -->
+<div id="future" class="tabcontent">
+    <div class="exercise">
+        <h2>Futuro con Will y Going To</h2>
+        <p>Completa las oraciones seleccionando el verbo "to be" correcto y "will" o "going to":</p>
+        <form id="futureForm">
+            <!-- 20 Ejercicios de Futuro con Will y Going To -->
+            <p>1. I <select id="future1">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future2">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> visit my grandparents tomorrow.
+            <button type="button" onclick="checkFutureAnswer('future1', 'future2', 'am', 'going to', 'feedbackF1')">Verificar</button>
+            <span id="feedbackF1" class="feedback"></span></p>
+
+            <p>2. They <select id="future3">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future4">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> watch a movie tonight.
+            <button type="button" onclick="checkFutureAnswer('future3', 'future4', 'are', 'going to', 'feedbackF2')">Verificar</button>
+            <span id="feedbackF2" class="feedback"></span></p>
+
+            <p>3. She <select id="future5">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future6">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> start a new job next week.
+            <button type="button" onclick="checkFutureAnswer('future5', 'future6', 'is', 'going to', 'feedbackF3')">Verificar</button>
+            <span id="feedbackF3" class="feedback"></span></p>
+
+            <p>4. We <select id="future7">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future8">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> go to the beach this weekend.
+            <button type="button" onclick="checkFutureAnswer('future7', 'future8', 'are', 'going to', 'feedbackF4')">Verificar</button>
+            <span id="feedbackF4" class="feedback"></span></p>
+
+            <p>5. I <select id="future9">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future10">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> call you later.
+            <button type="button" onclick="checkFutureAnswer('future9', 'future10', 'will', '', 'feedbackF5')">Verificar</button>
+            <span id="feedbackF5" class="feedback"></span></p>
+
+            <p>6. He <select id="future11">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future12">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> travel to Japan next year.
+            <button type="button" onclick="checkFutureAnswer('future11', 'future12', 'will', '', 'feedbackF6')">Verificar</button>
+            <span id="feedbackF6" class="feedback"></span></p>
+
+            <p>7. They <select id="future13">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future14">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> have a party tonight.
+            <button type="button" onclick="checkFutureAnswer('future13', 'future14', 'are', 'going to', 'feedbackF7')">Verificar</button>
+            <span id="feedbackF7" class="feedback"></span></p>
+
+            <p>8. She <select id="future15">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future16">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> buy a new dress.
+            <button type="button" onclick="checkFutureAnswer('future15', 'future16', 'is', 'going to', 'feedbackF8')">Verificar</button>
+            <span id="feedbackF8" class="feedback"></span></p>
+
+            <p>9. We <select id="future17">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future18">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> start a new course.
+            <button type="button" onclick="checkFutureAnswer('future17', 'future18', 'are', 'going to', 'feedbackF9')">Verificar</button>
+            <span id="feedbackF9" class="feedback"></span></p>
+
+            <p>10. I <select id="future19">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future20">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> help you with your homework.
+            <button type="button" onclick="checkFutureAnswer('future19', 'future20', 'will', '', 'feedbackF10')">Verificar</button>
+            <span id="feedbackF10" class="feedback"></span></p>
+
+            <p>11. She <select id="future21">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future22">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> visit her friend tomorrow.
+            <button type="button" onclick="checkFutureAnswer('future21', 'future22', 'is', 'going to', 'feedbackF11')">Verificar</button>
+            <span id="feedbackF11" class="feedback"></span></p>
+
+            <p>12. They <select id="future23">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future24">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> move to a new house next month.
+            <button type="button" onclick="checkFutureAnswer('future23', 'future24', 'are', 'going to', 'feedbackF12')">Verificar</button>
+            <span id="feedbackF12" class="feedback"></span></p>
+
+            <p>13. He <select id="future25">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future26">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> start a new hobby.
+            <button type="button" onclick="checkFutureAnswer('future25', 'future26', 'is', 'going to', 'feedbackF13')">Verificar</button>
+            <span id="feedbackF13" class="feedback"></span></p>
+
+            <p>14. We <select id="future27">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future28">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> renovate the kitchen.
+            <button type="button" onclick="checkFutureAnswer('future27', 'future28', 'are', 'going to', 'feedbackF14')">Verificar</button>
+            <span id="feedbackF14" class="feedback"></span></p>
+
+            <p>15. She <select id="future29">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future30">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> travel abroad next year.
+            <button type="button" onclick="checkFutureAnswer('future29', 'future30', 'is', 'going to', 'feedbackF15')">Verificar</button>
+            <span id="feedbackF15" class="feedback"></span></p>
+
+            <p>16. They <select id="future31">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future32">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> buy a new car soon.
+            <button type="button" onclick="checkFutureAnswer('future31', 'future32', 'are', 'going to', 'feedbackF16')">Verificar</button>
+            <span id="feedbackF16" class="feedback"></span></p>
+
+            <p>17. He <select id="future33">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future34">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> start a new business.
+            <button type="button" onclick="checkFutureAnswer('future33', 'future34', 'is', 'going to', 'feedbackF17')">Verificar</button>
+            <span id="feedbackF17" class="feedback"></span></p>
+
+            <p>18. We <select id="future35">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future36">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> adopt a pet.
+            <button type="button" onclick="checkFutureAnswer('future35', 'future36', 'are', 'going to', 'feedbackF18')">Verificar</button>
+            <span id="feedbackF18" class="feedback"></span></p>
+
+            <p>19. I <select id="future37">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future38">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> learn to play the piano.
+            <button type="button" onclick="checkFutureAnswer('future37', 'future38', 'will', '', 'feedbackF19')">Verificar</button>
+            <span id="feedbackF19" class="feedback"></span></p>
+
+            <p>20. They <select id="future39">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="will">will</option>
+                <option value="am">am</option>
+                <option value="is">is</option>
+                <option value="are">are</option>
+            </select> <select id="future40">
+                <option value="empty">--- Selecciona ---</option>
+                <option value="">---</option>
+                <option value="going to">going to</option>
+            </select> start a new project next month.
+            <button type="button" onclick="checkFutureAnswer('future39', 'future40', 'will', '', 'feedbackF20')">Verificar</button>
+            <span id="feedbackF20" class="feedback"></span></p>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Función para mostrar la pestaña activa
+    function openTab(evt, tabName) {
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            if (tablinks[i]) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Mostrar la primera pestaña por defecto
+    document.getElementsByClassName("tablink")[0].click();
+
+    // Función de verificación individual para respuestas de una selección
+    function checkSingleAnswer(selectId, correctAnswer, feedbackId) {
+        const userAnswer = document.getElementById(selectId).value;
+        const feedbackElement = document.getElementById(feedbackId);
+        
+        if (userAnswer === correctAnswer) {
+            feedbackElement.textContent = "¡Correcto!";
+            feedbackElement.className = "feedback correct";
+        } else {
+            feedbackElement.textContent = "Incorrecto. Intenta de nuevo.";
+            feedbackElement.className = "feedback incorrect";
+        }
+    }
+
+    // Función de verificación para ejercicios con dos selecciones
+    function checkDoubleAnswer(selectId1, selectId2, correctAnswer1, correctAnswer2, feedbackId) {
+        const userAnswer1 = document.getElementById(selectId1).value;
+        const userAnswer2 = document.getElementById(selectId2).value;
+        const feedbackElement = document.getElementById(feedbackId);
+
+        if (userAnswer1 === correctAnswer1 && userAnswer2 === correctAnswer2) {
+            feedbackElement.textContent = "¡Correcto!";
+            feedbackElement.className = "feedback correct";
+        } else {
+            feedbackElement.textContent = "Incorrecto. Intenta de nuevo.";
+            feedbackElement.className = "feedback incorrect";
+        }
+    }
+
+    // Función específica para ejercicios de Futuro con Will y Going To
+    function checkFutureAnswer(selectId1, selectId2, correctAnswer1, correctAnswer2, feedbackId) {
+        checkDoubleAnswer(selectId1, selectId2, correctAnswer1, correctAnswer2, feedbackId);
+    }
+</script>
+
+</body>
+</html>
